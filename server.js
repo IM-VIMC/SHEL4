@@ -1,8 +1,8 @@
-import express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import { GoogleGenerativeAI } from '@google/generative-ai';
-import dotenv from 'dotenv';
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const { GoogleGenerativeAI } = require('@google/generative-ai');
+const dotenv = require('dotenv');
 
 dotenv.config();
 const app = express();
@@ -23,6 +23,7 @@ app.post('/ask', async (req, res) => {
     const text = response.text();
     res.json({ response: text });
   } catch (error) {
+    console.error('❌ Error:', error);
     res.status(500).json({ error: 'Gagal generate jawaban.' });
   }
 });
