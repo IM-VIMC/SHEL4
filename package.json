@@ -1,0 +1,14 @@
+ {
+  "name": "shel4",
+  "version": "1.0.0",
+  "description": "Shel4 web client using Gemini API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "VERSA Owner VIMC",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
