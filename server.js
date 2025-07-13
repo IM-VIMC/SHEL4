@@ -8,7 +8,8 @@ dotenv.config();
 const app = express();
 const port = 3000;
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const L3WIPO = "API_KEY_LO";
+const genAI = new GoogleGenerativeAI(L3WIPO);
 const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
 
 app.use(cors());
